@@ -7,6 +7,7 @@
     font-family: "Manrope", sans-serif;
     font-style: normal;
 }
+
 /* projects HEADER */
 
 .projects__header {
@@ -35,4 +36,64 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top;
+}
+
+/* ITEMS */
+
+.projects__items {
+    position: relative;
+    display: flex;
+}
+
+.projects__item--image-wrapper {
+    display: flex;
+    min-height: 100vh;
+    z-index: 2;
+    position: sticky;
+    bottom: 0;
+}
+
+.projects__items--images,
+.projects__items--descriptions {
+    flex: 1 0 50%;
+}
+
+.projects__item--image {
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+}
+
+.projects__item--description {
+    display: flex;
+    flex-direction: column;
+    padding: 150px 60px;
+    background-color: white;
+    height: 100vh;
+}
+
+.projects__item--description-number {
+    font-size: 16px;
+    padding-bottom: 140px;
+    color: #919191;
+}
+
+.projects__item--description-title {
+    padding-bottom: 40px;
+    font-size: 50px;
+}
+
+.projects__item--description-text {
+    padding-bottom: 80px;
+    font-size: 18px;
+    max-width: 565px;
+    text-indent: 30px;
+}
+
+.projects__item--description-button {
+    padding: 20px 55px;
+    border-radius: 80px;
+    border: 1px solid #232323;
+    font-size: 16px;
+    width: fit-content;
 }
