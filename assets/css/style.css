@@ -8,6 +8,11 @@
     font-style: normal;
 }
 
+.projects__item--description-text,
+.projects__header--description-text {
+    text-indent: 30px;
+}
+
 /* projects HEADER */
 
 .projects__header {
@@ -20,7 +25,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 0 0 0 60px;
+    padding-left: 60px;
 }
 
 .projects__header--description-title {
@@ -47,7 +52,7 @@
 
 .projects__item--image-wrapper {
     display: flex;
-    min-height: 100vh;
+    height: 100%;
     z-index: 2;
     position: sticky;
     bottom: 0;
@@ -69,7 +74,13 @@
     flex-direction: column;
     padding: 150px 60px;
     background-color: white;
-    height: 100vh;
+    height: 100%;
+}
+
+.projects__item--image-wrapper,
+.projects__item--image,
+.projects__item--description {
+    max-height: 1000px;
 }
 
 .projects__item--description-number {
@@ -87,7 +98,6 @@
     padding-bottom: 80px;
     font-size: 18px;
     max-width: 565px;
-    text-indent: 30px;
 }
 
 .projects__item--description-button {
@@ -96,4 +106,209 @@
     border: 1px solid #232323;
     font-size: 16px;
     width: fit-content;
+}
+
+.projects__item--description-mobile {
+    display: none;
+}
+
+@media (max-width: 1600px) {
+    .projects__header {
+        grid-template-rows: 680px;
+    }
+
+    .projects__header--description {
+        padding-left: 40px;
+    }
+
+    .projects__item--image-wrapper,
+    .projects__item--image,
+    .projects__item--description {
+        max-height: 800px;
+    }
+
+    .projects__item--description {
+        padding: 120px 60px;
+    }
+
+    .projects__item--description-number {
+        padding-bottom: 70px;
+    }
+
+    .projects__item--description-title {
+        padding-bottom: 40px;
+    }
+
+    .projects__item--description-text {
+        padding-bottom: 80px;
+    }
+
+    .projects__item--description-button {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .projects__header {
+        grid-template-rows: 668px;
+    }
+
+    .projects__header--description {
+        padding-left: 40px;
+    }
+
+    .projects__header--description-title {
+        font-size: 42px;
+        padding-bottom: 40px;
+    }
+
+    .projects__header--description-text {
+        max-width: 450px;
+        font-size: 14px;
+    }
+
+    .projects__item--image-wrapper,
+    .projects__item--image,
+    .projects__item--description {
+        max-height: 768px;
+    }
+
+    .projects__item--description {
+        padding: 80px 32px;
+    }
+
+    .projects__item--description-number {
+        padding-bottom: 130px;
+        font-size: 12px;
+    }
+
+    .projects__item--description-title {
+        font-size: 35px;
+    }
+
+    .projects__item--description-text {
+        font-size: 14px;
+    }
+
+    .projects__item--description-button {
+        padding: 15px 45px;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .projects__header {
+        grid-template-rows: 350px 570px;
+    }
+
+    .projects__header--image {
+        grid-column: span 2;
+    }
+
+    .projects__header--description {
+        padding-left: 32px;
+        grid-column: span 2;
+    }
+
+    .projects__header--description-text {
+        max-width: 432px;
+    }
+
+    .projects__item--description-mobile {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        padding: 40px 24px;
+    }
+
+    .projects__items--descriptions {
+        display: none;
+    }
+
+    .projects__item--image-wrapper {
+        position: static;
+        display: flex;
+        flex-direction: column;
+        max-height: 1000px;
+    }
+
+    .projects__item--image {
+        flex: 0 0 512px;
+    }
+
+    .projects__item--description-number {
+        padding-bottom: 60px;
+    }
+
+    .projects__item--description-title {
+        padding-bottom: 30px;
+    }
+
+    .projects__item--description-text {
+        padding-bottom: 50px;
+    }
+}
+
+@media (max-width: 568px) {
+    .projects__item--description-text,
+    .projects__header--description-text {
+        text-indent: unset;
+    }
+
+    .projects__header {
+        grid-template-rows: 250px 320px;
+    }
+    .projects__header--description{
+        padding-left: 15px;
+    }
+    .projects__header--description-title {
+        font-size: 26px;
+    }
+
+    .projects__header--description-text {
+        font-size: 12px;
+    }
+
+    .projects__item--image-wrapper {
+        max-height: 690px;
+    }
+
+    .projects__item--image {
+        flex: 0 0 320px;
+    }
+
+    .projects__item--description-mobile {
+        padding: 20px 14px;
+    }
+
+    .projects__item--description-number {
+        padding-bottom: 40px;
+    }
+
+    .projects__item--description-title {
+        padding-bottom: 20px;
+        font-size: 22px;
+    }
+
+    .projects__item--description-text {
+        font-size: 12px;
+        padding-bottom: 30px;
+    }
+}
+@media(max-width: 320px){
+    .projects__header {
+        grid-template-rows: 270px 230px;
+    }
+    .projects__item--image-wrapper {
+        max-height: 620px;
+    }
+    .projects__item--image {
+        flex: 0 0 230px;
+    }
+    .projects__item--description-mobile {
+        padding: 20px 15px;
+    }
+    .projects__item--description-button {
+        padding: 15px 50px;
+    }
 }
